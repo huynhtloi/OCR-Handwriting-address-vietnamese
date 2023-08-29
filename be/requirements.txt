@@ -1,0 +1,8 @@
+Flask==2.3.3
+Pillow==9.4.0
+opencv-python==4.8.0.76
+easyocr==1.7
+tensorflow==2.12.0
+numpy==1.23.5
+Flask-RESTful==0.3.10
+Flask-Cors==4.0.0

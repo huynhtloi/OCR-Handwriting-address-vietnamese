@@ -1,0 +1,178 @@
+#file-input {
+    display: none;
+}
+
+.image-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.image-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-block .block-1 {
+    flex: 40%;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.image-block .block-2 {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-block .block-3 {
+    flex: 40%;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.custom-file-input {
+    background-color: #e4e4e4;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-file-input:hover {
+    background-color: #ffffff;
+}
+
+.image-input {
+    margin: 20px 0;
+}
+
+.uploaded-image {
+    max-width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.detect-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.detect-button:hover {
+    background-color: #ffffff;
+}
+
+.detect-result {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.detect-result h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.detect-result ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.detect-result li {
+    margin-bottom: 5px;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Màu nền trong suốt */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    /* Đảm bảo nằm trên tất cả các phần tử khác */
+}
+
+.switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.horizontal-line {
+    border-bottom: 1px solid #ffffff;
+    /* Màu và độ dày của đường kẻ */
+    margin: 20px 0;
+    /* Tùy chỉnh khoảng cách trên và dưới đường kẻ */
+}
+
+.introduction {
+    font-family: 'Work Sans', sans-serif !important;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fancy {
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+        background-image:
+            url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-size: 110% auto;
+        background-position: center;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.child-1 {
+    margin-bottom: 10px;
+}
+.child-2 {
+    margin-top: 10px;
+}
