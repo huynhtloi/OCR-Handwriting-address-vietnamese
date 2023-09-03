@@ -47,7 +47,7 @@ def bounding_box(image):
   results.sort(key=lambda x: x[0][0][1])
 
   # Xác định khoảng cách ngang tối đa để gộp bounding box
-  max_horizontal_gap = -7  # Tùy chỉnh theo kích thước của ảnh
+  max_horizontal_gap = -40  # Tùy chỉnh theo kích thước của ảnh
 
   # Tách riêng các dòng văn bản
   text_lines = []
@@ -70,9 +70,13 @@ def bounding_box(image):
     # cv2.rectangle(image, (int(top_left[0]), int(top_left[1])), (int(bottom_right[0]), int(bottom_right[1])), (0, 255, 0), 2)
 
     # Extract bounding box region
-    x, y = int(top_left[0]), int(top_left[1])
+    x, y = int(top_left[0]), max(0, int(top_left[1]))
     w, h = int(bottom_right[0] - top_left[0]), int(bottom_right[1] - top_left[1])
-    bounding_box_img = cv2.resize(image[y:y+h, x:x+w], (2167, 118))
+    # print("x:", x, "y:", y, "w:", w, "h:" , h)
+    if y + h <= image.shape[0] and x + w <= image.shape[1]:
+        bounding_box_img = cv2.resize(image[y:y+h, x:x+w], (2167, 118))
+    else:
+        print("Invalid cropping dimensions")
 
     # plt.imshow(bounding_box_img.squeeze(), cmap='gray')
     # plt.show()
