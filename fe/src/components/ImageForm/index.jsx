@@ -17,6 +17,7 @@ const ImageForm = () => {
     setImage(selectedImage);
     setShowDetectButton(true);
     setError(null);
+    setDetectResult(null);
   };
 
   const handleDetectClick = async () => {
