@@ -12,13 +12,13 @@ def preprocessing_img(bounding_box_img):
 
     height, width = img_gray.shape
 
-    # in this dataset, we don't need to do any resize at all here.
-    img_resized = cv2.resize(img_gray, (int(118/height*width), 118))
-
-    height, width = img_gray.shape
+    # Resize image to have height = 118 while maintaining the aspect ratio
+    new_height = 118
+    new_width = int((width / height) * new_height)
+    img_resized = cv2.resize(img_gray, (new_width, new_height))
 
     # Padding image using median
-    img_padded = np.pad(img_gray, ((0, 0), (0, max(0, 2167 - width))), 'median')
+    img_padded = np.pad(img_resized, ((0, 0), (0, max(0, 2167 - new_width))), 'median')
 
     # Blur it
     img_blurred = cv2.GaussianBlur(img_padded, (5, 5), 0)
