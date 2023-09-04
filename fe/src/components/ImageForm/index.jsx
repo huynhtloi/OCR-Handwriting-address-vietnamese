@@ -91,7 +91,7 @@ const ImageForm = () => {
         {loading && <div className="loading-overlay"><CircularProgress /></div>}
         {image && (
           <div className='image-block'>
-            <div className='block-1'>
+            <div className='block-1 image-container'>
               <img src={URL.createObjectURL(image)} alt="Uploaded" className="uploaded-image" />
             </div>
             <div className='block-2'>
