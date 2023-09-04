@@ -1,6 +1,4 @@
 body {
-    height: 100vh;
-    overflow: hidden;
     background: radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(https://picsum.photos/1280/800) center/cover;
     display: flex;
     flex-direction: column;
